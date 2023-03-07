@@ -1,0 +1,20 @@
+# Ways to send email
+
+~~~
+
+import smtplib
+
+sender = 'sender email'
+receivers = ['targets'] # must be  a list 
+
+message = "This is a test e-mail message."
+
+try:
+   smtpObj = smtplib.SMTP('server address')
+   smtpObj.sendmail(sender, receivers, message)         
+   print "Successfully sent email"
+except SMTPException:
+   print "Error: unable to send email"
+   
+~~~
+
